@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="সিহাব এগ্রো - মানসম্মত কৃষি উপকরণ ও নির্ভরযোগ্য সেবা। মুদিখানা, দিনাজপুর।">
+
+    <title>সিহাব এগ্রো | কৃষির উন্নয়নে, কৃষকের পাশে</title>
+
+
+    <style>
+
+        /* =========================
+           BASIC
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf5;
+            color: #24352a;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 7%;
+
+            background: rgba(255, 255, 255, 0.97);
+
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            color: #087f3e;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #245b39;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+
+            min-height: 650px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+            padding: 80px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(3, 82, 39, 0.88),
+                    rgba(8, 127, 62, 0.88)
+                );
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "🌿";
+            position: absolute;
+            font-size: 250px;
+            opacity: 0.06;
+            left: -40px;
+            bottom: -40px;
+        }
+
+        .hero::after {
+            content: "🌾";
+            position: absolute;
+            font-size: 250px;
+            opacity: 0.06;
+            right: -40px;
+            top: -30px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-small {
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: #d9f8e4;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+            color: #e9fff0;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 14px 28px;
+
+            margin: 7px;
+
+            border-radius: 50px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+            border: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-white {
+            background: white;
+            color: #087f3e;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-orange {
+            background: #f39c12;
+            color: white;
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        .section {
+            padding: 90px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        .section-title h2 {
+            color: #087f3e;
+            font-size: 40px;
+            margin: 5px 0;
+        }
+
+        .section-title p {
+            color: #66776b;
+        }
+
+
+        /* =========================
+           PRODUCTS
+        ========================= */
+
+        .product-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+        .product-card {
+
+            background: white;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            transition: 0.35s;
+
+            border: 1px solid #e5f0e7;
+        }
+
+        .product-card:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.13);
+        }
+
+        .product-icon {
+
+            height: 190px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 90px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dff6e6,
+                    #b8e8c7
+                );
+        }
+
+        .product-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .product-info h3 {
+            color: #087f3e;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .product-info p {
+            color: #68756c;
+        }
+
+
+        /* =========================
+           WHY US
+        ========================= */
+
+        .why-section {
+            background: #e9f7ed;
+        }
+
+        .why-grid {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .why-card {
+
+            background: white;
+
+            padding: 35px 20px;
+
+            text-align: center;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 6px 20px rgba(0,0,0,0.06);
+
+            transition: 0.3s;
+        }
+
+        .why-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .why-icon {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .why-card h3 {
+            color: #087f3e;
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-box {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 50px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 8px 30px rgba(0,0,0,0.07);
+        }
+
+        .about-box p {
+            margin-bottom: 20px;
+            color: #536359;
+        }
+
+        .about-box h3 {
+            color: #087f3e;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .promise {
+
+            text-align: center;
+
+            background: #e8f7ed;
+
+            padding: 20px;
+
+            border-radius: 12px;
+
+            color: #087f3e;
+
+            font-weight: bold;
+        }
+
+        .slogan {
+
+            text-align: center;
+
+            margin-top: 30px;
+
+            color: #087f3e;
+
+            font-size: 23px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           LOCATION
+        ========================= */
+
+        .location-section {
+            background: #075f30;
+            color: white;
+            text-align: center;
+        }
+
+        .location-section .section-title h2 {
+            color: white;
+        }
+
+        .location-section .section-title p {
+            color: #d8f4e0;
+        }
+
+        .location-icon {
+            font-size: 70px;
+            margin-bottom: 15px;
+        }
+
+        .location-name {
+            font-size: 21px;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-box {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #087f3e,
+                    #0baa50
+                );
+
+            color: white;
+
+            padding: 60px 30px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .contact-box h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .phone-number {
+            font-size: 25px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            background: #032d17;
+
+            color: #c9dfd0;
+
+            text-align: center;
+
+            padding: 30px 20px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .product-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            nav {
+                display: block;
+                text-align: center;
+            }
+
+            .logo {
+                margin-bottom: 12px;
+            }
+
+            .nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 65px 5%;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-box {
+                padding: 30px 20px;
+            }
+
+            .contact-box h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav>
+
+        <div class="logo">
+            🌱 সিহাব এগ্রো
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#products">Products</a>
+
+            <a href="#about">About</a>
+
+            <a href="#location">Location</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="hero-small">
+                🌾 WELCOME TO SIHAB AGRO
+            </div>
+
+            <h1>সিহাব এগ্রো</h1>
+
+            <h2>
+                কৃষির উন্নয়নে, কৃষকের পাশে
+            </h2>
+
+            <p>
+                মানসম্মত কৃষি উপকরণ, নির্ভরযোগ্য সেবা
+                এবং কৃষকের আস্থাকে সঙ্গে নিয়ে
+                আমরা কাজ করে যাচ্ছি।
+            </p>
+
+
+            <div class="buttons">
+
+                <a class="btn btn-white"
+                   href="#products">
+
+                    🌾 আমাদের পণ্য দেখুন
+
+                </a>
+
+
+                <a class="btn btn-whatsapp"
+                   href="https://wa.me/8801322750909"
+                   target="_blank">
+
+                    💬 WhatsApp করুন
+
+                </a>
+
+
+                <a class="btn btn-orange"
+                   href="tel:01322750909">
+
+                    📞 এখনই কল করুন
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================== -->
+
+    <section class="section" id="products">
+
+        <div class="section-title">
+
+            <span>OUR PRODUCTS</span>
+
+            <h2>🌾 আমাদের পণ্য</h2>
+
+            <p>
+                কৃষিকাজের প্রয়োজনীয় মানসম্মত উপকরণ
+            </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+
+            <div class="product-card">
+
+                <div class="product-icon">
+                    🌾
+                </div>
+
+                <div class="product-info">
+
+                    <h3>ইউরিয়া</h3>
+
+                    <p>
+                        কৃষি কাজে ব্যবহারের জন্য ইউরিয়া সার।
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-icon">
+                    🌱
+                </div>
+
+                <div class="product-info">
+
+                    <h3>TSP</h3>
+
+                    <p>
+                        কৃষি কাজে ব্যবহারের জন্য TSP সার।
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-icon">
+                    🌿
+                </div>
+
+                <div class="product-info">
+
+                    <h3>DAP</h3>
+
+                    <p>
+                        কৃষি কাজে ব্যবহারের জন্য DAP সার।
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-card">
+
+                <div class="product-icon">
+                    🍃
+                </div>
+
+                <div class="product-info">
+
+                    <h3>MOP</h3>
+
+                    <p>
+                        কৃষি কাজে ব্যবহারের জন্য MOP সার।
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY CHOOSE US
+    ========================== -->
+
+    <section class="section why-section">
+
+        <div class="section-title">
+
+            <span>WHY SIHAB AGRO</span>
+
+            <h2>কেন সিহাব এগ্রো?</h2>
+
+            <p>
+                কৃষকের আস্থাই আমাদের সবচেয়ে বড় শক্তি
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ⭐
+                </div>
+
+                <h3>মানসম্মত পণ্য</h3>
+
+                <p>
+                    ভালো মানের কৃষি উপকরণ দেওয়ার চেষ্টা করি।
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    🤝
+                </div>
+
+                <h3>নির্ভরযোগ্য সেবা</h3>
+
+                <p>
+                    কৃষকের প্রয়োজনকে গুরুত্ব দিয়ে সেবা প্রদান।
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    💰
+                </div>
+
+                <h3>ন্যায্য মূল্য</h3>
+
+                <p>
+                    সঠিক পণ্য ও ন্যায্য মূল্যের প্রতি গুরুত্ব।
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    🌱
+                </div>
+
+                <h3>টেকসই কৃষি</h3>
+
+                <p>
+                    আধুনিক ও টেকসই কৃষিতে সহযোগিতা করা।
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="section" id="about">
+
+        <div class="section-title">
+
+            <span>ABOUT US</span>
+
+            <h2>আমাদের সম্পর্কে</h2>
+
+        </div>
+
+
+        <div class="about-box">
+
+
+            <p>
+
+                <strong>সিহাব এগ্রো</strong> একটি কৃষিভিত্তিক প্রতিষ্ঠান,
+                যার লক্ষ্য আধুনিক প্রযুক্তি, মানসম্মত কৃষি উপকরণ এবং
+                নির্ভরযোগ্য সেবার মাধ্যমে কৃষকদের জন্য কৃষিকাজকে আরও
+                সহজ, কার্যকর ও লাভজনক করে তোলা।
+
+            </p>
+
+
+            <p>
+
+                আমরা কৃষকদের প্রয়োজন অনুযায়ী
+                <strong>
+                    উন্নতমানের বীজ, সার, ফসলের পুষ্টি উপকরণ,
+                    কীটনাশক, ছত্রাকনাশক, আগাছানাশক এবং অন্যান্য
+                    কৃষি উপকরণ
+                </strong>
+
+                সরবরাহ করার পাশাপাশি সঠিক ব্যবহার ও কৃষি ব্যবস্থাপনা
+                বিষয়ে প্রয়োজনীয় সহযোগিতা দেওয়ার চেষ্টা করি।
+
+            </p>
+
+
+            <p>
+
+                আমাদের বিশ্বাস, কৃষকের উন্নতিই দেশের কৃষি ও অর্থনীতির
+                উন্নতি। তাই গুণগত মান, সঠিক পণ্য, ন্যায্য মূল্য এবং
+                গ্রাহকের আস্থাকে সর্বোচ্চ গুরুত্ব দিয়ে আমরা কাজ করে যাচ্ছি।
+
+            </p>
+
+
+            <h3>
+                🎯 আমাদের লক্ষ্য
+            </h3>
+
+
+            <p>
+
+                আধুনিক ও টেকসই কৃষির মাধ্যমে কৃষকদের উৎপাদনশীলতা বৃদ্ধি
+                করা এবং বাংলাদেশের কৃষি খাতকে আরও সমৃদ্ধ করতে ভূমিকা রাখা।
+
+            </p>
+
+
+            <h3>
+                🤝 আমাদের প্রতিশ্রুতি
+            </h3>
+
+
+            <div class="promise">
+
+                মানসম্মত পণ্য • নির্ভরযোগ্য সেবা •
+                কৃষকের আস্থা • টেকসই কৃষি
+
+            </div>
+
+
+            <div class="slogan">
+
+                সিহাব এগ্রো — কৃষির উন্নয়নে, কৃষকের পাশে।
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOCATION
+    ========================== -->
+
+    <section class="section location-section" id="location">
+
+        <div class="section-title">
+
+            <span>OUR LOCATION</span>
+
+            <h2>📍 আমাদের লোকেশন</h2>
+
+            <p>
+                মুদিখানা, দিনাজপুর
+            </p>
+
+        </div>
+
+
+        <div class="location-icon">
+            📍
+        </div>
+
+
+        <div class="location-name">
+
+            <strong>সিহাব এগ্রো</strong><br>
+
+            মুদিখানা, দিনাজপুর
+
+        </div>
+
+
+        <a class="btn btn-orange"
+           href="https://maps.app.goo.gl/ocjAJpGxoMrMPs7J9"
+           target="_blank">
+
+            🗺️ Google Maps-এ লোকেশন দেখুন
+
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="section" id="contact">
+
+        <div class="contact-box">
+
+            <h2>
+                📞 আমাদের সাথে যোগাযোগ করুন
+            </h2>
+
+            <p>
+                আপনার প্রয়োজনীয় কৃষি উপকরণ সম্পর্কে জানতে
+                আমাদের সাথে যোগাযোগ করুন।
+            </p>
+
+
+            <div class="phone-number">
+
+                01322750909
+
+            </div>
+
+
+            <a class="btn btn-white"
+               href="tel:01322750909">
+
+                📞 Call Now
+
+            </a>
+
+
+            <a class="btn btn-whatsapp"
+               href="https://wa.me/8801322750909"
+               target="_blank">
+
+                💬 WhatsApp
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+
+            <strong>🌱 সিহাব এগ্রো</strong>
+
+        </p>
+
+        <p>
+            কৃষির উন্নয়নে, কৃষকের পাশে।
+        </p>
+
+        <p>
+            © 2026 Sihab Agro. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
