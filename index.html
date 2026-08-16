@@ -1,1088 +1,3058 @@
 <!DOCTYPE html>
 <html lang="bn">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="সিহাব এগ্রো - মানসম্মত কৃষি উপকরণ ও নির্ভরযোগ্য সেবা। মুদিখানা, দিনাজপুর।">
-
-    <title>সিহাব এগ্রো | কৃষির উন্নয়নে, কৃষকের পাশে</title>
-
-
-    <style>
-
-        /* =========================
-           BASIC
-        ========================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4faf5;
-            color: #24352a;
-            line-height: 1.7;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-
-        /* =========================
-           NAVBAR
-        ========================= */
-
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 999;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            padding: 15px 7%;
-
-            background: rgba(255, 255, 255, 0.97);
-
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-        }
-
-        .logo {
-            color: #087f3e;
-            font-size: 25px;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            color: #245b39;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #f39c12;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-
-            min-height: 650px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-
-            color: white;
-
-            padding: 80px 20px;
-
-            background:
-                linear-gradient(
-                    rgba(3, 82, 39, 0.88),
-                    rgba(8, 127, 62, 0.88)
-                );
-
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: "🌿";
-            position: absolute;
-            font-size: 250px;
-            opacity: 0.06;
-            left: -40px;
-            bottom: -40px;
-        }
-
-        .hero::after {
-            content: "🌾";
-            position: absolute;
-            font-size: 250px;
-            opacity: 0.06;
-            right: -40px;
-            top: -30px;
-        }
-
-        .hero-content {
-            max-width: 850px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-small {
-            font-size: 18px;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-            color: #d9f8e4;
-        }
-
-        .hero h1 {
-            font-size: 65px;
-            margin-bottom: 10px;
-        }
-
-        .hero h2 {
-            font-size: 28px;
-            font-weight: normal;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: auto;
-            color: #e9fff0;
-        }
-
-
-        /* =========================
-           BUTTONS
-        ========================= */
-
-        .buttons {
-            margin-top: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-
-            padding: 14px 28px;
-
-            margin: 7px;
-
-            border-radius: 50px;
-
-            font-weight: bold;
-
-            transition: 0.3s;
-
-            border: none;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-        }
-
-        .btn-white {
-            background: white;
-            color: #087f3e;
-        }
-
-        .btn-whatsapp {
-            background: #25D366;
-            color: white;
-        }
-
-        .btn-orange {
-            background: #f39c12;
-            color: white;
-        }
-
-
-        /* =========================
-           SECTION
-        ========================= */
-
-        .section {
-            padding: 90px 7%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title span {
-            color: #f39c12;
-            font-weight: bold;
-        }
-
-        .section-title h2 {
-            color: #087f3e;
-            font-size: 40px;
-            margin: 5px 0;
-        }
-
-        .section-title p {
-            color: #66776b;
-        }
-
-
-        /* =========================
-           PRODUCTS
-        ========================= */
-
-        .product-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 25px;
-
-            max-width: 1200px;
-
-            margin: auto;
-        }
-
-        .product-card {
-
-            background: white;
-
-            border-radius: 20px;
-
-            overflow: hidden;
-
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.08);
-
-            transition: 0.35s;
-
-            border: 1px solid #e5f0e7;
-        }
-
-        .product-card:hover {
-
-            transform: translateY(-10px);
-
-            box-shadow:
-                0 15px 35px rgba(0,0,0,0.13);
-        }
-
-        .product-icon {
-
-            height: 190px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            font-size: 90px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #dff6e6,
-                    #b8e8c7
-                );
-        }
-
-        .product-info {
-            padding: 25px;
-            text-align: center;
-        }
-
-        .product-info h3 {
-            color: #087f3e;
-            font-size: 25px;
-            margin-bottom: 8px;
-        }
-
-        .product-info p {
-            color: #68756c;
-        }
-
-
-        /* =========================
-           WHY US
-        ========================= */
-
-        .why-section {
-            background: #e9f7ed;
-        }
-
-        .why-grid {
-
-            max-width: 1100px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 20px;
-        }
-
-        .why-card {
-
-            background: white;
-
-            padding: 35px 20px;
-
-            text-align: center;
-
-            border-radius: 18px;
-
-            box-shadow:
-                0 6px 20px rgba(0,0,0,0.06);
-
-            transition: 0.3s;
-        }
-
-        .why-card:hover {
-            transform: translateY(-6px);
-        }
-
-        .why-icon {
-            font-size: 45px;
-            margin-bottom: 12px;
-        }
-
-        .why-card h3 {
-            color: #087f3e;
-            margin-bottom: 8px;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about-box {
-
-            max-width: 1000px;
-
-            margin: auto;
-
-            background: white;
-
-            padding: 50px;
-
-            border-radius: 25px;
-
-            box-shadow:
-                0 8px 30px rgba(0,0,0,0.07);
-        }
-
-        .about-box p {
-            margin-bottom: 20px;
-            color: #536359;
-        }
-
-        .about-box h3 {
-            color: #087f3e;
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
-
-        .promise {
-
-            text-align: center;
-
-            background: #e8f7ed;
-
-            padding: 20px;
-
-            border-radius: 12px;
-
-            color: #087f3e;
-
-            font-weight: bold;
-        }
-
-        .slogan {
-
-            text-align: center;
-
-            margin-top: 30px;
-
-            color: #087f3e;
-
-            font-size: 23px;
-
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           LOCATION
-        ========================= */
-
-        .location-section {
-            background: #075f30;
-            color: white;
-            text-align: center;
-        }
-
-        .location-section .section-title h2 {
-            color: white;
-        }
-
-        .location-section .section-title p {
-            color: #d8f4e0;
-        }
-
-        .location-icon {
-            font-size: 70px;
-            margin-bottom: 15px;
-        }
-
-        .location-name {
-            font-size: 21px;
-            margin-bottom: 25px;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact-box {
-
-            max-width: 900px;
-
-            margin: auto;
-
-            text-align: center;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #087f3e,
-                    #0baa50
-                );
-
-            color: white;
-
-            padding: 60px 30px;
-
-            border-radius: 25px;
-
-            box-shadow:
-                0 10px 30px rgba(0,0,0,0.12);
-        }
-
-        .contact-box h2 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
-
-        .phone-number {
-            font-size: 25px;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-
-            background: #032d17;
-
-            color: #c9dfd0;
-
-            text-align: center;
-
-            padding: 30px 20px;
-        }
-
-        footer strong {
-            color: white;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            .product-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .why-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-        }
-
-
-        @media (max-width: 650px) {
-
-            nav {
-                display: block;
-                text-align: center;
-            }
-
-            .logo {
-                margin-bottom: 12px;
-            }
-
-            .nav-links {
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 12px;
-            }
-
-            .nav-links a {
-                font-size: 14px;
-            }
-
-            .hero {
-                min-height: 600px;
-            }
-
-            .hero h1 {
-                font-size: 43px;
-            }
-
-            .hero h2 {
-                font-size: 22px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .section {
-                padding: 65px 5%;
-            }
-
-            .section-title h2 {
-                font-size: 32px;
-            }
-
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-box {
-                padding: 30px 20px;
-            }
-
-            .contact-box h2 {
-                font-size: 30px;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>শিহাব এগ্রো | Shihab Agro</title>
+
+<meta name="description"
+content="শিহাব এগ্রো - Shihab Agro | কৃষির উন্নয়নে, কৃষকের পাশে। মানসম্মত কৃষি উপকরণ ও নির্ভরযোগ্য সহযোগিতা।">
+
+<meta name="theme-color" content="#06351f">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --green:#08783d;
+    --green2:#0baa55;
+    --dark:#06351f;
+    --deep:#022b17;
+    --lime:#a5e86d;
+    --light:#eef8f1;
+    --bg:#f6faf7;
+    --white:#ffffff;
+    --text:#163426;
+    --muted:#6c7d73;
+    --border:#dfeae3;
+    --shadow:0 20px 60px rgba(3,52,29,.10);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Hind Siliguri","Inter",sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+section{
+    scroll-margin-top:85px;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(220,235,225,.8);
+    transition:.3s;
+}
+
+header.scrolled{
+    box-shadow:0 10px 35px rgba(0,0,0,.07);
+}
+
+.navbar{
+    height:78px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    color:var(--green);
+    font-size:23px;
+    font-weight:800;
+}
+
+.logo-mark{
+    width:45px;
+    height:45px;
+    display:grid;
+    place-items:center;
+    border-radius:15px;
+    color:white;
+    background:linear-gradient(145deg,#08783d,#12ad5b);
+    box-shadow:0 10px 25px rgba(8,120,61,.22);
+}
+
+.logo-text small{
+    display:block;
+    margin-top:-5px;
+    color:#799083;
+    font-family:Inter,sans-serif;
+    font-size:8px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:24px;
+}
+
+.nav-links a{
+    color:#42554a;
+    font-size:14px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.nav-links a:hover{
+    color:var(--green);
+}
+
+.nav-contact{
+    padding:10px 19px;
+    color:white !important;
+    border-radius:25px;
+    background:linear-gradient(135deg,#08783d,#0aaa55);
+    box-shadow:0 8px 20px rgba(8,120,61,.18);
+}
+
+.menu-btn{
+    display:none;
+    width:43px;
+    height:43px;
+    border:1px solid var(--border);
+    border-radius:13px;
+    color:var(--green);
+    background:white;
+    font-size:23px;
+    cursor:pointer;
+}
+
+/* ================= OFFER ================= */
+
+.offer{
+    margin-top:78px;
+    padding:9px 15px;
+    text-align:center;
+    color:#ecfff2;
+    background:linear-gradient(90deg,#043a20,#08783d,#043a20);
+    font-size:13px;
+}
+
+.offer strong{
+    color:var(--lime);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:730px;
+    position:relative;
+    overflow:hidden;
+    color:white;
+    background:
+    radial-gradient(circle at 78% 18%,rgba(165,232,109,.18),transparent 25%),
+    radial-gradient(circle at 100% 100%,rgba(34,190,105,.18),transparent 34%),
+    linear-gradient(125deg,#022a17,#065d31 55%,#098a48);
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:550px;
+    height:550px;
+    right:-230px;
+    bottom:-290px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:50%;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    left:-160px;
+    top:100px;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:50%;
+}
+
+.hero-inner{
+    min-height:730px;
+    display:grid;
+    grid-template-columns:1.08fr .92fr;
+    align-items:center;
+    gap:50px;
+    position:relative;
+    z-index:2;
+}
+
+.badge{
+    display:inline-flex;
+    padding:8px 15px;
+    margin-bottom:21px;
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.08);
+    color:#dbf5e2;
+    font-size:13px;
+    backdrop-filter:blur(8px);
+}
+
+.hero h1{
+    max-width:750px;
+    font-family:"Inter","Hind Siliguri",sans-serif;
+    font-size:clamp(45px,6vw,76px);
+    line-height:1.06;
+    letter-spacing:-2.5px;
+}
+
+.hero h1 span{
+    color:var(--lime);
+}
+
+.hero-text{
+    max-width:650px;
+    margin:24px 0 30px;
+    color:#d1e9d9;
+    font-size:18px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    gap:7px;
+    min-height:49px;
+    padding:11px 22px;
+    border:0;
+    border-radius:28px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-white{
+    color:var(--green);
+    background:white;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.btn-outline{
+    color:white;
+    border:1px solid rgba(255,255,255,.28);
+    background:rgba(255,255,255,.07);
+}
+
+.stats{
+    display:flex;
+    gap:35px;
+    margin-top:43px;
+}
+
+.stat{
+    padding-left:15px;
+    border-left:2px solid rgba(255,255,255,.2);
+}
+
+.stat strong{
+    display:block;
+    font-family:Inter,sans-serif;
+    font-size:23px;
+}
+
+.stat span{
+    color:#b9d9c4;
+    font-size:12px;
+}
+
+/* HERO ART */
+
+.hero-art{
+    height:480px;
+    position:relative;
+}
+
+.art-box{
+    position:absolute;
+    inset:25px 0 25px 30px;
+    display:grid;
+    place-items:center;
+    overflow:hidden;
+    border-radius:40px;
+    border:1px solid rgba(255,255,255,.18);
+    background:
+    radial-gradient(circle at center,rgba(165,232,109,.16),transparent 35%),
+    linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.035));
+    backdrop-filter:blur(12px);
+}
+
+.art-box::before{
+    content:"";
+    width:330px;
+    height:330px;
+    position:absolute;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.10);
+}
+
+.big-leaf{
+    position:relative;
+    font-size:145px;
+    filter:drop-shadow(0 25px 25px rgba(0,0,0,.22));
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0) rotate(-2deg);}
+    50%{transform:translateY(-14px) rotate(2deg);}
+}
+
+.floating-info{
+    position:absolute;
+    z-index:5;
+    padding:15px 18px;
+    border-radius:17px;
+    color:var(--text);
+    background:white;
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+}
+
+.info1{
+    top:55px;
+    left:0;
+}
+
+.info2{
+    right:-5px;
+    bottom:55px;
+}
+
+.floating-info strong{
+    display:block;
+    color:var(--green);
+    font-size:20px;
+}
+
+.floating-info small{
+    color:var(--muted);
+}
+
+/* ================= GENERAL ================= */
+
+.section{
+    padding:100px 0;
+}
+
+.section-head{
+    max-width:700px;
+    margin-bottom:45px;
+}
+
+.eyebrow{
+    color:var(--green);
+    font-family:Inter,sans-serif;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.section-head h2{
+    margin-top:8px;
+    font-family:Inter,"Hind Siliguri",sans-serif;
+    font-size:42px;
+    line-height:1.18;
+}
+
+.section-head p{
+    margin-top:12px;
+    color:var(--muted);
+}
+
+/* ================= PRODUCTS ================= */
+
+.products{
+    background:white;
+}
+
+.search-area{
+    display:flex;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.search-box{
+    position:relative;
+    flex:1;
+}
+
+.search-box input{
+    width:100%;
+    height:54px;
+    padding:0 20px 0 50px;
+    outline:none;
+    border:1px solid var(--border);
+    border-radius:28px;
+    background:#fbfdfb;
+    font-size:15px;
+    transition:.25s;
+}
+
+.search-box input:focus{
+    border-color:#8bc9a2;
+    box-shadow:0 0 0 4px rgba(8,120,61,.07);
+}
+
+.search-box span{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:19px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.product-card{
+    position:relative;
+    overflow:hidden;
+    min-height:335px;
+    padding:27px;
+    border:1px solid var(--border);
+    border-radius:26px;
+    background:white;
+    transition:.35s;
+}
+
+.product-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,#08783d,#a5e86d);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.35s;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+    border-color:#b8ddc4;
+    box-shadow:var(--shadow);
+}
+
+.product-card:hover::before{
+    transform:scaleX(1);
+}
+
+.product-card.hide{
+    display:none;
+}
+
+.product-icon{
+    width:70px;
+    height:70px;
+    display:grid;
+    place-items:center;
+    margin-bottom:20px;
+    border-radius:21px;
+    background:linear-gradient(145deg,#eaf7ef,#f4fbf6);
+    font-size:34px;
+}
+
+.product-card h3{
+    color:var(--green);
+    font-size:23px;
+}
+
+.product-card p{
+    margin-top:6px;
+    color:var(--muted);
+    font-size:14px;
+}
+
+.product-button{
+    position:absolute;
+    left:27px;
+    bottom:24px;
+    padding:9px 16px;
+    border:0;
+    border-radius:22px;
+    color:var(--green);
+    background:#eaf7ef;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.product-button:hover{
+    color:white;
+    background:var(--green);
+}
+
+/* ================= CROP ================= */
+
+.crop-section{
+    background:#eef8f1;
+}
+
+.crop-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.crop-card{
+    padding:28px 20px;
+    text-align:center;
+    border:1px solid #dcebe0;
+    border-radius:24px;
+    background:white;
+    transition:.3s;
+}
+
+.crop-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow);
+}
+
+.crop-icon{
+    font-size:48px;
+}
+
+.crop-card h3{
+    margin-top:10px;
+    color:var(--green);
+}
+
+.crop-card p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* ================= DETAILS ================= */
+
+.details{
+    display:none;
+    background:#eef8f1;
+}
+
+.details.show{
+    display:block;
+    animation:appear .4s ease;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.details-box{
+    padding:40px;
+    border-radius:30px;
+    background:white;
+    box-shadow:var(--shadow);
+}
+
+.detail-title{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding-bottom:25px;
+    border-bottom:1px solid var(--border);
+}
+
+.detail-icon{
+    width:75px;
+    height:75px;
+    display:grid;
+    place-items:center;
+    flex-shrink:0;
+    border-radius:22px;
+    background:#eaf7ef;
+    font-size:38px;
+}
+
+.detail-title h2{
+    color:var(--green);
+    font-size:34px;
+}
+
+.detail-title p{
+    color:var(--muted);
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+    margin-top:28px;
+}
+
+.benefit{
+    padding:21px;
+    border:1px solid var(--border);
+    border-radius:18px;
+    background:#fbfdfb;
+}
+
+.benefit-num{
+    width:32px;
+    height:32px;
+    display:grid;
+    place-items:center;
+    margin-bottom:8px;
+    border-radius:50%;
+    color:white;
+    background:var(--green);
+    font-weight:bold;
+}
+
+.benefit h3{
+    font-size:18px;
+}
+
+.benefit p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+.nutrient{
+    margin-top:22px;
+    padding:23px;
+    border-radius:20px;
+    color:white;
+    background:linear-gradient(135deg,#064523,#08783d,#0aa452);
+}
+
+.nutrient p{
+    margin-top:5px;
+    color:#d6f0de;
+}
+
+.tags{
+    margin-top:10px;
+}
+
+.tag{
+    display:inline-block;
+    margin:3px;
+    padding:4px 10px;
+    border-radius:20px;
+    color:#e4f8e9;
+    background:rgba(255,255,255,.12);
+    font-size:12px;
+}
+
+.warning{
+    margin-top:18px;
+    padding:14px 16px;
+    border-left:4px solid #dda529;
+    border-radius:7px;
+    color:#675628;
+    background:#fff9e9;
+    font-size:13px;
+}
+
+.detail-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:20px;
+}
+
+.green-btn{
+    color:white;
+    background:var(--green);
+}
+
+.close-btn{
+    color:var(--green);
+    background:#eaf7ef;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    background:white;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    align-items:center;
+    gap:65px;
+}
+
+.about-art{
+    height:450px;
+    display:grid;
+    place-items:center;
+    overflow:hidden;
+    position:relative;
+    border-radius:36px;
+    background:linear-gradient(145deg,#064523,#08783d,#0ca653);
+    box-shadow:var(--shadow);
+}
+
+.about-art::before,
+.about-art::after{
+    content:"";
+    position:absolute;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:50%;
+}
+
+.about-art::before{
+    width:420px;
+    height:420px;
+    left:-140px;
+    top:-140px;
+}
+
+.about-art::after{
+    width:320px;
+    height:320px;
+    right:-120px;
+    bottom:-120px;
+}
+
+.about-leaf{
+    position:relative;
+    font-size:125px;
+    filter:drop-shadow(0 25px 25px rgba(0,0,0,.2));
+    animation:float 4s ease-in-out infinite;
+}
+
+.about-content h2{
+    margin:7px 0 17px;
+    font-family:Inter,"Hind Siliguri",sans-serif;
+    font-size:43px;
+    line-height:1.15;
+}
+
+.about-content p{
+    color:var(--muted);
+    margin-bottom:12px;
+}
+
+.promise{
+    margin-top:22px;
+    padding:17px;
+    border-radius:15px;
+    color:var(--green);
+    background:#eef8f1;
+    font-weight:700;
+}
+
+/* ================= TEAM ================= */
+
+.team{
+    background:#f7faf8;
+}
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+    max-width:850px;
+    margin:auto;
+}
+
+.team-card{
+    padding:35px;
+    text-align:center;
+    border:1px solid var(--border);
+    border-radius:28px;
+    background:white;
+    box-shadow:0 12px 35px rgba(3,52,29,.06);
+    transition:.3s;
+}
+
+.team-card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow);
+}
+
+.team-avatar{
+    width:90px;
+    height:90px;
+    display:grid;
+    place-items:center;
+    margin:0 auto 18px;
+    border-radius:50%;
+    color:white;
+    font-family:Inter,sans-serif;
+    font-size:30px;
+    font-weight:800;
+    background:linear-gradient(145deg,#08783d,#11aa58);
+    box-shadow:0 12px 28px rgba(8,120,61,.2);
+}
+
+.team-card .role{
+    color:#7ca64e;
+    font-family:Inter,sans-serif;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.team-card h3{
+    margin-top:5px;
+    color:var(--green);
+    font-size:25px;
+}
+
+.team-card p{
+    margin-top:6px;
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* ================= STATS ================= */
+
+.stats-section{
+    color:white;
+    background:var(--deep);
+}
+
+.big-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center;
+}
+
+.big-stat{
+    padding:24px 20px;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:22px;
+    background:rgba(255,255,255,.05);
+}
+
+.big-stat strong{
+    display:block;
+    color:var(--lime);
+    font-family:Inter,sans-serif;
+    font-size:38px;
+}
+
+.big-stat span{
+    color:#c1dccb;
+    font-size:14px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    background:#f7faf8;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.service{
+    padding:28px 22px;
+    border:1px solid var(--border);
+    border-radius:22px;
+    background:white;
+    transition:.3s;
+}
+
+.service:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow);
+}
+
+.service-icon{
+    font-size:37px;
+}
+
+.service h3{
+    margin-top:10px;
+    color:var(--green);
+}
+
+.service p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* ================= TIPS ================= */
+
+.tips{
+    background:white;
+}
+
+.tip-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.tip{
+    padding:28px;
+    border:1px solid var(--border);
+    border-radius:23px;
+    background:#f6faf7;
+}
+
+.tip-number{
+    color:#78b044;
+    font-family:Inter,sans-serif;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.tip h3{
+    margin-top:8px;
+}
+
+.tip p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* ================= REVIEWS ================= */
+
+.reviews{
+    background:#eef8f1;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.review{
+    padding:28px;
+    border-radius:23px;
+    background:white;
+    border:1px solid #dcebe0;
+}
+
+.stars{
+    color:#f3b51b;
+    letter-spacing:2px;
+}
+
+.review p{
+    margin:12px 0;
+    color:#53645a;
+    font-size:14px;
+}
+
+.review strong{
+    color:var(--green);
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    background:white;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    grid-auto-rows:180px;
+    gap:14px;
+}
+
+.gallery-item{
+    display:grid;
+    place-items:center;
+    overflow:hidden;
+    position:relative;
+    border-radius:22px;
+    color:white;
+    font-size:60px;
+    background:
+    radial-gradient(circle at 30% 20%,rgba(165,232,109,.25),transparent 25%),
+    linear-gradient(135deg,#064523,#0aa653);
+    transition:.3s;
+}
+
+.gallery-item:hover{
+    transform:scale(1.015);
+}
+
+.gallery-item:first-child{
+    grid-row:span 2;
+    font-size:110px;
+}
+
+.gallery-label{
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    padding:5px 10px;
+    border-radius:15px;
+    background:rgba(0,0,0,.25);
+    font-size:12px;
+}
+
+/* ================= LOCATION ================= */
+
+.location{
+    color:white;
+    background:
+    radial-gradient(circle at 90% 20%,rgba(155,226,99,.15),transparent 30%),
+    #04341d;
+}
+
+.location-inner{
+    text-align:center;
+}
+
+.location .eyebrow{
+    color:var(--lime);
+}
+
+.location h2{
+    margin-top:7px;
+    font-family:Inter,"Hind Siliguri",sans-serif;
+    font-size:42px;
+}
+
+.location-desc{
+    max-width:600px;
+    margin:10px auto 27px;
+    color:#bddac6;
+}
+
+.location-card{
+    max-width:650px;
+    margin:auto;
+    padding:30px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:25px;
+    background:rgba(255,255,255,.07);
+    backdrop-filter:blur(10px);
+}
+
+.location-card h3{
+    font-size:24px;
+}
+
+.location-card p{
+    color:#c3dfcc;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:white;
+}
+
+.contact-box{
+    position:relative;
+    overflow:hidden;
+    padding:65px 30px;
+    text-align:center;
+    color:white;
+    border-radius:32px;
+    background:
+    radial-gradient(circle at 85% 20%,rgba(165,232,109,.22),transparent 25%),
+    linear-gradient(135deg,#064523,#08783d,#0ca653);
+    box-shadow:var(--shadow);
+}
+
+.contact-box h2{
+    position:relative;
+    z-index:2;
+    font-family:Inter,"Hind Siliguri",sans-serif;
+    font-size:40px;
+}
+
+.contact-box p{
+    position:relative;
+    z-index:2;
+    color:#d2efdc;
+}
+
+.phone{
+    position:relative;
+    z-index:2;
+    margin:18px 0 22px;
+    font-family:Inter,sans-serif;
+    font-size:27px;
+    font-weight:800;
+}
+
+.contact-buttons{
+    position:relative;
+    z-index:2;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:55px 0 20px;
+    color:#b8d3c1;
+    background:#022b17;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:45px;
+    padding-bottom:30px;
+}
+
+.footer-logo{
+    color:white;
+    font-size:24px;
+    font-weight:800;
+}
+
+.footer-brand{
+    color:#8fd35d;
+    font-family:Inter,sans-serif;
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+.footer-text{
+    max-width:390px;
+    margin-top:8px;
+    font-size:14px;
+}
+
+.footer-col h3{
+    margin-bottom:12px;
+    color:white;
+}
+
+.footer-col a{
+    display:block;
+    margin-bottom:6px;
+    font-size:14px;
+}
+
+.footer-col a:hover{
+    color:white;
+}
+
+.copyright{
+    padding-top:18px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.09);
+    font-size:12px;
+}
+
+/* ================= FLOATING ================= */
+
+.floating{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:800;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.float{
+    width:52px;
+    height:52px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    color:white;
+    font-size:20px;
+    box-shadow:0 9px 25px rgba(0,0,0,.2);
+    transition:.25s;
+}
+
+.float:hover{
+    transform:translateY(-3px) scale(1.04);
+}
+
+.call{
+    background:var(--green);
+}
+
+.whatsapp{
+    background:#20c967;
+}
+
+.top{
+    position:fixed;
+    right:18px;
+    bottom:135px;
+    z-index:800;
+    width:45px;
+    height:45px;
+    display:none;
+    place-items:center;
+    border:0;
+    border-radius:50%;
+    color:white;
+    background:#06351f;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+.top.show{
+    display:grid;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+    .nav-links{
+        gap:13px;
+    }
+
+    .nav-links a{
+        font-size:12px;
+    }
+
+    .hero-inner{
+        grid-template-columns:1fr;
+        padding:80px 0;
+    }
+
+    .hero-art{
+        display:none;
+    }
+
+    .product-grid,
+    .crop-grid,
+    .service-grid,
+    .big-stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:650px){
+
+    body{
+        background:#f6faf7;
+    }
+
+    .container{
+        width:min(92%,520px);
+    }
+
+    .navbar{
+        height:70px;
+    }
+
+    .logo{
+        font-size:19px;
+    }
+
+    .logo-mark{
+        width:39px;
+        height:39px;
+        border-radius:13px;
+    }
+
+    .logo-text small{
+        font-size:7px;
+    }
+
+    .menu-btn{
+        display:grid;
+        place-items:center;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:3%;
+        width:94%;
+        padding:12px;
+        flex-direction:column;
+        align-items:stretch;
+        gap:3px;
+        border:1px solid var(--border);
+        border-radius:18px;
+        background:rgba(255,255,255,.98);
+        box-shadow:0 18px 40px rgba(0,0,0,.12);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links a{
+        padding:11px;
+        text-align:center;
+        border-radius:10px;
+    }
+
+    .nav-links a:hover{
+        background:#eef8f1;
+    }
+
+    .nav-contact{
+        margin-top:4px;
+    }
+
+    .offer{
+        margin-top:70px;
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero-inner{
+        min-height:650px;
+        padding:70px 0 65px;
+    }
+
+    .badge{
+        font-size:11px;
+        padding:7px 12px;
+    }
+
+    .hero h1{
+        font-size:43px;
+        letter-spacing:-1.7px;
+    }
+
+    .hero-text{
+        margin:19px 0 25px;
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    .hero-buttons{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:9px;
+    }
+
+    .btn{
+        min-height:48px;
+        padding:10px 15px;
+        font-size:13px;
+    }
+
+    .stats{
+        gap:10px;
+        margin-top:35px;
+        justify-content:space-between;
+    }
+
+    .stat{
+        padding-left:9px;
+        flex:1;
+    }
+
+    .stat strong{
+        font-size:17px;
+    }
+
+    .stat span{
+        font-size:10px;
+    }
+
+    .section{
+        padding:72px 0;
+    }
+
+    .section-head{
+        margin-bottom:30px;
+    }
+
+    .section-head h2,
+    .about-content h2{
+        font-size:31px;
+        line-height:1.25;
+    }
+
+    .section-head p{
+        font-size:14px;
+    }
+
+    .search-area{
+        margin-bottom:20px;
+    }
+
+    .search-box input{
+        height:50px;
+    }
+
+    .product-grid,
+    .crop-grid,
+    .service-grid,
+    .big-stats,
+    .tip-grid,
+    .review-grid,
+    .team-grid{
+        grid-template-columns:1fr;
+    }
+
+    .product-card{
+        min-height:300px;
+        padding:24px;
+        border-radius:22px;
+    }
+
+    .product-icon{
+        width:62px;
+        height:62px;
+        font-size:30px;
+    }
+
+    .product-card h3{
+        font-size:22px;
+    }
+
+    .product-button{
+        left:24px;
+        bottom:20px;
+    }
+
+    .details-box{
+        padding:22px 16px;
+        border-radius:23px;
+    }
+
+    .detail-title{
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .detail-icon{
+        width:57px;
+        height:57px;
+        font-size:28px;
+        border-radius:17px;
+    }
+
+    .detail-title h2{
+        font-size:25px;
+    }
+
+    .detail-title p{
+        font-size:12px;
+        line-height:1.5;
+    }
+
+    .benefit-grid{
+        grid-template-columns:1fr;
+        gap:11px;
+    }
+
+    .benefit{
+        padding:17px;
+    }
+
+    .nutrient{
+        padding:19px;
+    }
+
+    .nutrient p{
+        font-size:13px;
+    }
+
+    .about-art{
+        height:300px;
+        border-radius:26px;
+    }
+
+    .about-leaf{
+        font-size:90px;
+    }
+
+    .about-content p{
+        font-size:14px;
+    }
+
+    .team-card{
+        padding:28px 20px;
+    }
+
+    .team-avatar{
+        width:78px;
+        height:78px;
+        font-size:25px;
+    }
+
+    .big-stat{
+        padding:20px;
+    }
+
+    .big-stat strong{
+        font-size:32px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        grid-auto-rows:145px;
+    }
+
+    .gallery-item:first-child{
+        grid-column:span 2;
+        grid-row:span 1;
+        font-size:75px;
+    }
+
+    .gallery-item{
+        font-size:45px;
+        border-radius:18px;
+    }
+
+    .location h2{
+        font-size:31px;
+    }
+
+    .location-card{
+        padding:24px 18px;
+        border-radius:22px;
+    }
+
+    .contact-box{
+        padding:48px 18px;
+        border-radius:25px;
+    }
+
+    .contact-box h2{
+        font-size:29px;
+        line-height:1.25;
+    }
+
+    .phone{
+        font-size:21px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:28px;
+    }
+
+    .footer-text{
+        margin:auto;
+    }
+
+    .floating{
+        right:13px;
+        bottom:13px;
+    }
+
+    .float{
+        width:48px;
+        height:48px;
+    }
+
+    .top{
+        right:13px;
+        bottom:125px;
+        width:42px;
+        height:42px;
+    }
+}
+</style>
 </head>
-
 
 <body>
 
+<!-- ================= HEADER ================= -->
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+<header id="header">
 
-    <nav>
+<div class="container navbar">
 
-        <div class="logo">
-            🌱 সিহাব এগ্রো
-        </div>
+<a href="#home" class="logo">
 
-        <div class="nav-links">
+<span class="logo-mark">🌱</span>
 
-            <a href="#home">Home</a>
+<span class="logo-text">
+শিহাব এগ্রো
+<small>SHIHAB AGRO</small>
+</span>
 
-            <a href="#products">Products</a>
+</a>
 
-            <a href="#about">About</a>
+<nav class="nav-links" id="navLinks">
 
-            <a href="#location">Location</a>
+<a href="#home">হোম</a>
+<a href="#products">পণ্য</a>
+<a href="#crops">ফসল</a>
+<a href="#about">আমাদের সম্পর্কে</a>
+<a href="#team">টিম</a>
+<a href="#tips">টিপস</a>
+<a href="#contact" class="nav-contact">যোগাযোগ</a>
 
-            <a href="#contact">Contact</a>
+</nav>
 
-        </div>
+<button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">
+☰
+</button>
 
-    </nav>
+</div>
+
+</header>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+<!-- ================= OFFER ================= -->
 
-    <section class="hero" id="home">
+<div class="offer">
+🌱 <strong>শিহাব এগ্রো</strong> — কৃষির উন্নয়নে, কৃষকের পাশে।
+</div>
 
-        <div class="hero-content">
 
-            <div class="hero-small">
-                🌾 WELCOME TO SIHAB AGRO
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="container hero-inner">
+
+<div>
+
+<div class="badge">
+🌾 কৃষকের বিশ্বস্ত সহযোগী
+</div>
+
+<h1>
+কৃষির উন্নয়নে,<br>
+<span>কৃষকের পাশে।</span>
+</h1>
+
+<p class="hero-text">
+মানসম্মত কৃষি উপকরণ, নির্ভরযোগ্য সেবা
+এবং কৃষকের আস্থাকে সঙ্গে নিয়ে
+<strong>শিহাব এগ্রো</strong> কাজ করে যাচ্ছে
+উন্নত ও টেকসই কৃষির লক্ষ্যে।
+</p>
+
+<div class="hero-buttons">
+
+<a href="#products" class="btn btn-white">
+🌱 পণ্য দেখুন
+</a>
+
+<a href="tel:01322750909" class="btn btn-outline">
+📞 যোগাযোগ
+</a>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<strong>04+</strong>
+<span>প্রধান পণ্য</span>
+</div>
+
+<div class="stat">
+<strong>100%</strong>
+<span>আস্থার গুরুত্ব</span>
+</div>
+
+<div class="stat">
+<strong>Dinajpur</strong>
+<span>আমাদের ঠিকানা</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="hero-art">
+
+<div class="art-box">
+<div class="big-leaf">🌾</div>
+</div>
+
+<div class="floating-info info1">
+<strong>🌱 কৃষি</strong>
+<small>সঠিক পণ্যের সঠিক ব্যবহার</small>
+</div>
+
+<div class="floating-info info2">
+<strong>✓ বিশ্বস্ত</strong>
+<small>কৃষকের আস্থার ঠিকানা</small>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="section products" id="products">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">OUR PRODUCTS</div>
+
+<h2>
+কৃষির জন্য প্রয়োজনীয়<br>
+মানসম্মত উপকরণ
+</h2>
+
+<p>
+পণ্যের নাম লিখে search করুন।
+আর বিস্তারিত জানতে “বিস্তারিত দেখুন” বাটনে ক্লিক করুন।
+</p>
+
+</div>
+
+
+<div class="search-area">
+
+<div class="search-box">
+
+<span>🔍</span>
+
+<input
+type="text"
+id="productSearch"
+placeholder="পণ্যের নাম লিখুন..."
+onkeyup="searchProducts()">
+
+</div>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- UREA -->
+
+<div class="product-card" data-name="ইউরিয়া urea">
+
+<div class="product-icon">🌾</div>
+
+<h3>ইউরিয়া</h3>
+
+<p>
+নাইট্রোজেন সরবরাহকারী
+গুরুত্বপূর্ণ কৃষি সার।
+</p>
+
+<button
+class="product-button"
+onclick="showProduct('urea')">
+বিস্তারিত দেখুন →
+</button>
+
+</div>
+
+
+<!-- TSP -->
+
+<div class="product-card" data-name="tsp টিএসপি">
+
+<div class="product-icon">🌱</div>
+
+<h3>TSP</h3>
+
+<p>
+ফসফরাস সরবরাহকারী
+গুরুত্বপূর্ণ কৃষি সার।
+</p>
+
+<button
+class="product-button"
+onclick="showProduct('tsp')">
+বিস্তারিত দেখুন →
+</button>
+
+</div>
+
+
+<!-- DAP -->
+
+<div class="product-card" data-name="dap">
+
+<div class="product-icon">🌿</div>
+
+<h3>DAP</h3>
+
+<p>
+নাইট্রোজেন ও ফসফরাস
+সরবরাহকারী কৃষি সার।
+</p>
+
+<button
+class="product-button"
+onclick="showProduct('dap')">
+বিস্তারিত দেখুন →
+</button>
+
+</div>
+
+
+<!-- MOP -->
+
+<div class="product-card" data-name="mop">
+
+<div class="product-icon">🍃</div>
+
+<h3>MOP</h3>
+
+<p>
+পটাশিয়ামের গুরুত্বপূর্ণ
+উৎস।
+</p>
+
+<button
+class="product-button"
+onclick="showProduct('mop')">
+বিস্তারিত দেখুন →
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CROP ================= -->
+
+<section class="section crop-section" id="crops">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">CROP GUIDE</div>
+
+<h2>
+ফসল অনুযায়ী কৃষি
+ব্যবস্থাপনা
+</h2>
+
+<p>
+বিভিন্ন ফসলের জন্য মাটি,
+পুষ্টি ও পরিচর্যার বিষয়গুলো
+সঠিকভাবে বিবেচনা করা গুরুত্বপূর্ণ।
+</p>
+
+</div>
+
+
+<div class="crop-grid">
+
+<div class="crop-card">
+<div class="crop-icon">🌾</div>
+<h3>ধান</h3>
+<p>সুষম পুষ্টি ও জমির পরিচর্যার দিকে গুরুত্ব দিন।</p>
+</div>
+
+<div class="crop-card">
+<div class="crop-icon">🌽</div>
+<h3>ভুট্টা</h3>
+<p>গাছের বৃদ্ধি ও পুষ্টির চাহিদা নিয়মিত পর্যবেক্ষণ করুন।</p>
+</div>
+
+<div class="crop-card">
+<div class="crop-icon">🥔</div>
+<h3>আলু</h3>
+<p>মাটি, পানি ও পুষ্টির ভারসাম্য বজায় রাখা গুরুত্বপূর্ণ।</p>
+</div>
+
+<div class="crop-card">
+<div class="crop-icon">🥬</div>
+<h3>সবজি</h3>
+<p>সঠিক সার ব্যবস্থাপনা ও নিয়মিত পর্যবেক্ষণ করুন।</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PRODUCT DETAILS ================= -->
+
+<section class="section details" id="productDetails">
+
+<div class="container">
+
+<div class="details-box">
+
+<div class="detail-title">
+
+<div class="detail-icon" id="detailIcon">🌱</div>
+
+<div>
+
+<div class="eyebrow">PRODUCT DETAILS</div>
+
+<h2 id="detailName">পণ্যের নাম</h2>
+
+<p id="detailSubtitle"></p>
+
+</div>
+
+</div>
+
+
+<div class="benefit-grid" id="benefitGrid"></div>
+
+
+<div class="nutrient">
+
+<h3>🌱 প্রধান পুষ্টি ও ভূমিকা</h3>
+
+<p id="nutrientText"></p>
+
+<div class="tags" id="tags"></div>
+
+</div>
+
+
+<div class="warning">
+
+⚠️ <strong>গুরুত্বপূর্ণ:</strong>
+কৃষি উপকরণ ব্যবহারের আগে পণ্যের
+label ও নির্দেশনা অনুসরণ করুন।
+ফসল ও মাটির অবস্থা অনুযায়ী সঠিক
+ব্যবহারের জন্য কৃষি বিশেষজ্ঞের
+পরামর্শ নিন।
+
+</div>
+
+
+<div class="detail-actions">
+
+<a
+href="https://wa.me/8801322750909"
+target="_blank"
+class="btn"
+style="background:#20c967;color:white;">
+💬 WhatsApp
+</a>
+
+<a
+href="tel:01322750909"
+class="btn green-btn">
+📞 Call
+</a>
+
+<button
+class="btn close-btn"
+onclick="closeProduct()">
+✕ বন্ধ করুন
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section about" id="about">
+
+<div class="container about-grid">
+
+<div class="about-art">
+<div class="about-leaf">🌱</div>
+</div>
+
+
+<div class="about-content">
+
+<div class="eyebrow">ABOUT SHIHAB AGRO</div>
+
+<h2>
+কৃষকের আস্থাই<br>
+আমাদের শক্তি।
+</h2>
+
+<p>
+<strong>শিহাব এগ্রো</strong> একটি কৃষিভিত্তিক
+প্রতিষ্ঠান। আমাদের লক্ষ্য হলো
+মানসম্মত কৃষি উপকরণ ও
+নির্ভরযোগ্য সেবার মাধ্যমে
+কৃষকদের সহযোগিতা করা।
+</p>
+
+<p>
+কৃষকের প্রয়োজন অনুযায়ী
+সঠিক কৃষি উপকরণ সম্পর্কে
+সহযোগিতা দেওয়ার চেষ্টা করি।
+</p>
+
+<p>
+আমাদের বিশ্বাস—
+<strong>কৃষকের উন্নতিই দেশের
+কৃষির উন্নতি।</strong>
+</p>
+
+<div class="promise">
+✓ মানসম্মত পণ্য
+&nbsp; • &nbsp;
+✓ নির্ভরযোগ্য সেবা
+&nbsp; • &nbsp;
+✓ কৃষকের আস্থা
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TEAM ================= -->
+
+<section class="section team" id="team">
+
+<div class="container">
+
+<div class="section-head" style="margin-left:auto;margin-right:auto;text-align:center;">
+
+<div class="eyebrow">OUR LEADERSHIP</div>
+
+<h2>
+শিহাব এগ্রোর নেতৃত্ব
+</h2>
+
+<p>
+একটি ভালো উদ্যোগের পেছনে থাকে
+দৃঢ় নেতৃত্ব ও কৃষকের জন্য কাজ করার মানসিকতা।
+</p>
+
+</div>
+
+
+<div class="team-grid">
+
+<div class="team-card">
+
+<div class="team-avatar">
+MH
+</div>
+
+<div class="role">
+FOUNDER
+</div>
+
+<h3>Maruf Hasan</h3>
+
+<p>
+প্রতিষ্ঠাতা — শিহাব এগ্রো
+</p>
+
+</div>
+
+
+<div class="team-card">
+
+<div class="team-avatar">
+MZ
+</div>
+
+<div class="role">
+CEO
+</div>
+
+<h3>Mehedi Hassan Zihad</h3>
+
+<p>
+প্রধান নির্বাহী কর্মকর্তা — শিহাব এগ্রো
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="section stats-section">
+
+<div class="container">
+
+<div class="big-stats">
+
+<div class="big-stat">
+<strong>04+</strong>
+<span>প্রধান পণ্য</span>
+</div>
+
+<div class="big-stat">
+<strong>100%</strong>
+<span>কৃষকের আস্থা</span>
+</div>
+
+<div class="big-stat">
+<strong>24/7</strong>
+<span>যোগাযোগের সুযোগ</span>
+</div>
+
+<div class="big-stat">
+<strong>1</strong>
+<span>লক্ষ্য — কৃষকের পাশে থাকা</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section services">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">OUR SERVICES</div>
+
+<h2>
+কৃষকের জন্য<br>
+আমাদের প্রতিশ্রুতি
+</h2>
+
+</div>
+
+
+<div class="service-grid">
+
+<div class="service">
+
+<div class="service-icon">🌱</div>
+
+<h3>কৃষি উপকরণ</h3>
+
+<p>
+কৃষিকাজের প্রয়োজনীয় বিভিন্ন
+কৃষি উপকরণ সরবরাহ।
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">🤝</div>
+
+<h3>কৃষকের সহযোগিতা</h3>
+
+<p>
+কৃষকের প্রয়োজন অনুযায়ী
+সহযোগিতা দেওয়ার চেষ্টা।
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">⭐</div>
+
+<h3>মানের গুরুত্ব</h3>
+
+<p>
+গুণগত মান ও সঠিক পণ্যের
+প্রতি সর্বোচ্চ গুরুত্ব।
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">🌍</div>
+
+<h3>টেকসই কৃষি</h3>
+
+<p>
+আধুনিক ও টেকসই কৃষির
+উন্নয়নে সহযোগিতা।
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TIPS ================= -->
+
+<section class="section tips" id="tips">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">AGRICULTURE TIPS</div>
+
+<h2>
+কৃষকের জন্য কিছু<br>
+গুরুত্বপূর্ণ টিপস
+</h2>
+
+</div>
+
+
+<div class="tip-grid">
+
+<div class="tip">
+
+<div class="tip-number">TIP 01</div>
+
+<h3>মাটির অবস্থা বুঝুন</h3>
+
+<p>
+জমির মাটি ও ফসলের প্রয়োজন
+বিবেচনা করে সার ব্যবস্থাপনা করুন।
+</p>
+
+</div>
+
+
+<div class="tip">
+
+<div class="tip-number">TIP 02</div>
+
+<h3>সঠিকভাবে ব্যবহার করুন</h3>
+
+<p>
+কৃষি উপকরণ ব্যবহারের আগে
+পণ্যের label ও নির্দেশনা পড়ুন।
+</p>
+
+</div>
+
+
+<div class="tip">
+
+<div class="tip-number">TIP 03</div>
+
+<h3>ফসল পর্যবেক্ষণ করুন</h3>
+
+<p>
+রোগ, পোকামাকড় বা পুষ্টির
+ঘাটতির লক্ষণ দেখা দিলে
+দ্রুত ব্যবস্থা নিন।
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= REVIEWS ================= -->
+
+<section class="section reviews" id="reviews">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">CUSTOMER VOICE</div>
+
+<h2>
+কৃষকের আস্থা
+</h2>
+
+<p>
+আমাদের লক্ষ্য কৃষকের আস্থা অর্জন
+এবং ভালো সেবা দেওয়া।
+</p>
+
+</div>
+
+
+<div class="review-grid">
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“ভালো পণ্য এবং প্রয়োজনীয়
+সহযোগিতা পাওয়া যায়।”
+</p>
+
+<strong>— একজন কৃষক</strong>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“কৃষি উপকরণ সম্পর্কে
+জানতে সহজেই যোগাযোগ করা যায়।”
+</p>
+
+<strong>— একজন কৃষক</strong>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“কৃষকের প্রয়োজনকে গুরুত্ব
+দেওয়াটা ভালো লেগেছে।”
+</p>
+
+<strong>— একজন কৃষক</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="section gallery">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">SHIHAB AGRO</div>
+
+<h2>
+কৃষি ও প্রকৃতির সাথে
+আমাদের পথচলা
+</h2>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+🌾
+</div>
+
+<div class="gallery-item">
+🌱
+</div>
+
+<div class="gallery-item">
+🌽
+</div>
+
+<div class="gallery-item">
+🥬
+</div>
+
+<div class="gallery-item">
+🌿
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= LOCATION ================= -->
+
+<section class="section location" id="location">
+
+<div class="container location-inner">
+
+<div class="eyebrow">OUR LOCATION</div>
+
+<h2>📍 আমাদের লোকেশন</h2>
+
+<p class="location-desc">
+আমাদের প্রতিষ্ঠানে আসতে নিচের
+Google Maps বাটনে ক্লিক করুন।
+</p>
+
+
+<div class="location-card">
+
+<h3>🌱 শিহাব এগ্রো</h3>
+
+<p>
+মুদিখানা, দিনাজপুর
+</p>
+
+<a
+href="https://maps.app.goo.gl/ocjAJpGxoMrMPs7J9"
+target="_blank"
+class="btn btn-white"
+style="margin-top:17px;">
+🗺️ Google Maps খুলুন
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section contact" id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<div class="eyebrow" style="color:#a6e56c;">
+CONTACT SHIHAB AGRO
+</div>
+
+<h2>
+আমাদের সাথে যোগাযোগ করুন
+</h2>
+
+<p>
+কৃষি উপকরণ সম্পর্কে জানতে
+সরাসরি আমাদের সাথে যোগাযোগ করুন।
+</p>
+
+<div class="phone">
+📞 01322750909
+</div>
+
+<div class="contact-buttons">
+
+<a
+href="tel:01322750909"
+class="btn btn-white">
+📞 Call Now
+</a>
+
+<a
+href="https://wa.me/8801322750909"
+target="_blank"
+class="btn btn-outline">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+🌱 শিহাব এগ্রো
+</div>
+
+<div class="footer-brand">
+SHIHAB AGRO
+</div>
+
+<p class="footer-text">
+কৃষির উন্নয়নে, কৃষকের পাশে।
+মানসম্মত কৃষি উপকরণ ও
+নির্ভরযোগ্য সেবার প্রত্যয়ে।
+</p>
+
+</div>
+
+
+<div class="footer-col">
+
+<h3>Quick Links</h3>
+
+<a href="#home">হোম</a>
+<a href="#products">পণ্য</a>
+<a href="#crops">ফসল</a>
+<a href="#about">আমাদের সম্পর্কে</a>
+<a href="#team">আমাদের টিম</a>
+<a href="#tips">কৃষি টিপস</a>
+
+</div>
+
+
+<div class="footer-col">
+
+<h3>যোগাযোগ</h3>
+
+<a href="tel:01322750909">
+📞 01322750909
+</a>
+
+<a
+href="https://wa.me/8801322750909"
+target="_blank">
+💬 WhatsApp
+</a>
+
+<a
+href="https://maps.app.goo.gl/ocjAJpGxoMrMPs7J9"
+target="_blank">
+📍 দিনাজপুর
+</a>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+© 2026 Shihab Agro • All Rights Reserved
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ================= FLOATING BUTTONS ================= -->
+
+<div class="floating">
+
+<a
+href="tel:01322750909"
+class="float call"
+title="Call">
+📞
+</a>
+
+<a
+href="https://wa.me/8801322750909"
+target="_blank"
+class="float whatsapp"
+title="WhatsApp">
+💬
+</a>
+
+</div>
+
+
+<button
+class="top"
+id="topButton"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+↑
+</button>
+
+
+<script>
+
+/* ================= MOBILE MENU ================= */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList.toggle("active");
+
+}
+
+
+/* Close menu */
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        document
+        .getElementById("navLinks")
+        .classList.remove("active");
+
+    });
+
+});
+
+
+/* ================= HEADER SHADOW ================= */
+
+window.addEventListener("scroll",()=>{
+
+    const header=document.getElementById("header");
+
+    if(window.scrollY>30){
+
+        header.classList.add("scrolled");
+
+    }else{
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
+
+
+/* ================= PRODUCT DATA ================= */
+
+const products={
+
+urea:{
+
+name:"ইউরিয়া",
+
+icon:"🌾",
+
+subtitle:"নাইট্রোজেন সরবরাহকারী গুরুত্বপূর্ণ কৃষি সার",
+
+nutrient:
+"ইউরিয়া মূলত নাইট্রোজেন সরবরাহ করে। নাইট্রোজেন উদ্ভিদের পাতার বৃদ্ধি ও সবুজভাব বজায় রাখতে গুরুত্বপূর্ণ ভূমিকা রাখে।",
+
+tags:[
+"নাইট্রোজেন",
+"পাতার বৃদ্ধি",
+"সবুজভাব",
+"উদ্ভিদের বৃদ্ধি"
+],
+
+benefits:[
+
+[
+"নাইট্রোজেনের ঘাটতি পূরণে সহায়তা",
+"ইউরিয়া গাছের প্রয়োজনীয় নাইট্রোজেন সরবরাহ করতে সাহায্য করে।"
+],
+
+[
+"গাছের বৃদ্ধি বাড়াতে সহায়তা",
+"নাইট্রোজেন উদ্ভিদের সবুজ ও প্রাথমিক বৃদ্ধিতে গুরুত্বপূর্ণ।"
+],
+
+[
+"পাতার সবুজভাব বজায় রাখতে সহায়তা",
+"পর্যাপ্ত নাইট্রোজেন উদ্ভিদের স্বাভাবিক সবুজ বৃদ্ধিতে সহায়তা করে।"
+],
+
+[
+"উদ্ভিদের সামগ্রিক বৃদ্ধিতে ভূমিকা",
+"সঠিক পুষ্টি ব্যবস্থাপনার অংশ হিসেবে ইউরিয়া গাছের স্বাভাবিক বৃদ্ধিতে ভূমিকা রাখে।"
+]
+
+]
+
+},
+
+
+tsp:{
+
+name:"TSP",
+
+icon:"🌱",
+
+subtitle:"ফসফরাসের গুরুত্বপূর্ণ উৎস",
+
+nutrient:
+"TSP-তে ফসফরাস প্রধান পুষ্টি উপাদান। ফসফরাস উদ্ভিদের শিকড়ের বৃদ্ধি ও বিভিন্ন প্রজনন পর্যায়ে গুরুত্বপূর্ণ ভূমিকা রাখে।",
+
+tags:[
+"ফসফরাস",
+"শিকড়",
+"ফুল",
+"ফলন"
+],
+
+benefits:[
+
+[
+"শিকড়ের বৃদ্ধিতে সহায়তা",
+"ফসফরাস উদ্ভিদের সুস্থ শিকড়ের বিকাশে গুরুত্বপূর্ণ ভূমিকা রাখে।"
+],
+
+[
+"উদ্ভিদের প্রাথমিক বৃদ্ধিতে ভূমিকা",
+"সঠিক ফসফরাস পুষ্টি উদ্ভিদের স্বাভাবিক বৃদ্ধিতে সহায়তা করতে পারে।"
+],
+
+[
+"ফুল ও প্রজনন পর্যায়ে ভূমিকা",
+"ফসফরাস উদ্ভিদের ফুল ও প্রজনন-সম্পর্কিত বিভিন্ন প্রক্রিয়ায় গুরুত্বপূর্ণ।"
+],
+
+[
+"শক্তি ব্যবস্থাপনায় ভূমিকা",
+"উদ্ভিদের শক্তি সঞ্চালন ও ব্যবহারের বিভিন্ন জৈব প্রক্রিয়ায় ফসফরাস প্রয়োজন।"
+]
+
+]
+
+},
+
+
+dap:{
+
+name:"DAP",
+
+icon:"🌿",
+
+subtitle:"নাইট্রোজেন ও ফসফরাস সরবরাহকারী সার",
+
+nutrient:
+"DAP সাধারণত নাইট্রোজেন ও ফসফরাস সরবরাহ করে। এই দুই পুষ্টি উদ্ভিদের বৃদ্ধি ও শিকড়ের বিকাশে গুরুত্বপূর্ণ ভূমিকা রাখে।",
+
+tags:[
+"নাইট্রোজেন",
+"ফসফরাস",
+"শিকড়",
+"বৃদ্ধি"
+],
+
+benefits:[
+
+[
+"দুই ধরনের পুষ্টি সরবরাহ",
+"DAP থেকে উদ্ভিদ নাইট্রোজেন ও ফসফরাস—দুই ধরনের গুরুত্বপূর্ণ পুষ্টি পেতে পারে।"
+],
+
+[
+"শিকড়ের বিকাশে সহায়তা",
+"DAP-এর ফসফরাস অংশ উদ্ভিদের শিকড়ের স্বাভাবিক বিকাশে ভূমিকা রাখে।"
+],
+
+[
+"গাছের বৃদ্ধিতে সহায়তা",
+"DAP-এর নাইট্রোজেন উদ্ভিদের সবুজ বৃদ্ধি ও সামগ্রিক বৃদ্ধিতে ভূমিকা রাখে।"
+],
+
+[
+"প্রাথমিক পুষ্টি ব্যবস্থাপনায় ভূমিকা",
+"সঠিক সার ব্যবস্থাপনার অংশ হিসেবে DAP ফসলের প্রাথমিক পুষ্টি চাহিদা পূরণে ব্যবহার করা হয়।"
+]
+
+]
+
+},
+
+
+mop:{
+
+name:"MOP",
+
+icon:"🍃",
+
+subtitle:"পটাশিয়ামের গুরুত্বপূর্ণ উৎস",
+
+nutrient:
+"MOP বা Muriate of Potash মূলত পটাশিয়ামের উৎস। পটাশিয়াম উদ্ভিদের পানি ব্যবস্থাপনা ও বিভিন্ন শারীরবৃত্তীয় প্রক্রিয়ায় গুরুত্বপূর্ণ ভূমিকা রাখে।",
+
+tags:[
+"পটাশিয়াম",
+"পানি ব্যবস্থাপনা",
+"গাছের শক্তি",
+"ফসলের গুণমান"
+],
+
+benefits:[
+
+[
+"পটাশিয়ামের চাহিদা পূরণে সহায়তা",
+"MOP ফসলের প্রয়োজনীয় পটাশিয়াম সরবরাহ করতে সাহায্য করে।"
+],
+
+[
+"পানি ব্যবস্থাপনায় ভূমিকা",
+"পটাশিয়াম উদ্ভিদের পানি নিয়ন্ত্রণ ও ব্যবস্থাপনার গুরুত্বপূর্ণ প্রক্রিয়ায় ভূমিকা রাখে।"
+],
+
+[
+"গাছের স্থিতিশীলতায় ভূমিকা",
+"পর্যাপ্ত পটাশিয়াম উদ্ভিদের বিভিন্ন শারীরবৃত্তীয় প্রক্রিয়াকে স্বাভাবিক রাখতে সহায়তা করে।"
+],
+
+[
+"ফসলের গুণমানের সঙ্গে সম্পর্কিত",
+"পটাশিয়াম উদ্ভিদের বৃদ্ধি ও উৎপাদন প্রক্রিয়ায় গুরুত্বপূর্ণ ভূমিকা পালন করে।"
+]
+
+]
+
+}
+
+};
+
+
+/* ================= SHOW PRODUCT ================= */
+
+function showProduct(key){
+
+    const product=products[key];
+
+    if(!product) return;
+
+
+    document.getElementById("detailIcon").innerText=
+        product.icon;
+
+    document.getElementById("detailName").innerText=
+        product.name;
+
+    document.getElementById("detailSubtitle").innerText=
+        product.subtitle;
+
+    document.getElementById("nutrientText").innerText=
+        product.nutrient;
+
+
+    const grid=
+        document.getElementById("benefitGrid");
+
+    grid.innerHTML="";
+
+
+    product.benefits.forEach((item,index)=>{
+
+        const div=document.createElement("div");
+
+        div.className="benefit";
+
+        div.innerHTML=`
+
+            <div class="benefit-num">
+                ${index+1}
             </div>
-
-            <h1>সিহাব এগ্রো</h1>
-
-            <h2>
-                কৃষির উন্নয়নে, কৃষকের পাশে
-            </h2>
-
-            <p>
-                মানসম্মত কৃষি উপকরণ, নির্ভরযোগ্য সেবা
-                এবং কৃষকের আস্থাকে সঙ্গে নিয়ে
-                আমরা কাজ করে যাচ্ছি।
-            </p>
-
-
-            <div class="buttons">
-
-                <a class="btn btn-white"
-                   href="#products">
-
-                    🌾 আমাদের পণ্য দেখুন
-
-                </a>
-
-
-                <a class="btn btn-whatsapp"
-                   href="https://wa.me/8801322750909"
-                   target="_blank">
-
-                    💬 WhatsApp করুন
-
-                </a>
-
-
-                <a class="btn btn-orange"
-                   href="tel:01322750909">
-
-                    📞 এখনই কল করুন
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         PRODUCTS
-    ========================== -->
-
-    <section class="section" id="products">
-
-        <div class="section-title">
-
-            <span>OUR PRODUCTS</span>
-
-            <h2>🌾 আমাদের পণ্য</h2>
-
-            <p>
-                কৃষিকাজের প্রয়োজনীয় মানসম্মত উপকরণ
-            </p>
-
-        </div>
-
-
-        <div class="product-grid">
-
-
-            <div class="product-card">
-
-                <div class="product-icon">
-                    🌾
-                </div>
-
-                <div class="product-info">
-
-                    <h3>ইউরিয়া</h3>
-
-                    <p>
-                        কৃষি কাজে ব্যবহারের জন্য ইউরিয়া সার।
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-card">
-
-                <div class="product-icon">
-                    🌱
-                </div>
-
-                <div class="product-info">
-
-                    <h3>TSP</h3>
-
-                    <p>
-                        কৃষি কাজে ব্যবহারের জন্য TSP সার।
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-card">
-
-                <div class="product-icon">
-                    🌿
-                </div>
-
-                <div class="product-info">
-
-                    <h3>DAP</h3>
-
-                    <p>
-                        কৃষি কাজে ব্যবহারের জন্য DAP সার।
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-card">
-
-                <div class="product-icon">
-                    🍃
-                </div>
-
-                <div class="product-info">
-
-                    <h3>MOP</h3>
-
-                    <p>
-                        কৃষি কাজে ব্যবহারের জন্য MOP সার।
-                    </p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         WHY CHOOSE US
-    ========================== -->
-
-    <section class="section why-section">
-
-        <div class="section-title">
-
-            <span>WHY SIHAB AGRO</span>
-
-            <h2>কেন সিহাব এগ্রো?</h2>
-
-            <p>
-                কৃষকের আস্থাই আমাদের সবচেয়ে বড় শক্তি
-            </p>
-
-        </div>
-
-
-        <div class="why-grid">
-
-
-            <div class="why-card">
-
-                <div class="why-icon">
-                    ⭐
-                </div>
-
-                <h3>মানসম্মত পণ্য</h3>
-
-                <p>
-                    ভালো মানের কৃষি উপকরণ দেওয়ার চেষ্টা করি।
-                </p>
-
-            </div>
-
-
-            <div class="why-card">
-
-                <div class="why-icon">
-                    🤝
-                </div>
-
-                <h3>নির্ভরযোগ্য সেবা</h3>
-
-                <p>
-                    কৃষকের প্রয়োজনকে গুরুত্ব দিয়ে সেবা প্রদান।
-                </p>
-
-            </div>
-
-
-            <div class="why-card">
-
-                <div class="why-icon">
-                    💰
-                </div>
-
-                <h3>ন্যায্য মূল্য</h3>
-
-                <p>
-                    সঠিক পণ্য ও ন্যায্য মূল্যের প্রতি গুরুত্ব।
-                </p>
-
-            </div>
-
-
-            <div class="why-card">
-
-                <div class="why-icon">
-                    🌱
-                </div>
-
-                <h3>টেকসই কৃষি</h3>
-
-                <p>
-                    আধুনিক ও টেকসই কৃষিতে সহযোগিতা করা।
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
-
-    <section class="section" id="about">
-
-        <div class="section-title">
-
-            <span>ABOUT US</span>
-
-            <h2>আমাদের সম্পর্কে</h2>
-
-        </div>
-
-
-        <div class="about-box">
-
-
-            <p>
-
-                <strong>সিহাব এগ্রো</strong> একটি কৃষিভিত্তিক প্রতিষ্ঠান,
-                যার লক্ষ্য আধুনিক প্রযুক্তি, মানসম্মত কৃষি উপকরণ এবং
-                নির্ভরযোগ্য সেবার মাধ্যমে কৃষকদের জন্য কৃষিকাজকে আরও
-                সহজ, কার্যকর ও লাভজনক করে তোলা।
-
-            </p>
-
-
-            <p>
-
-                আমরা কৃষকদের প্রয়োজন অনুযায়ী
-                <strong>
-                    উন্নতমানের বীজ, সার, ফসলের পুষ্টি উপকরণ,
-                    কীটনাশক, ছত্রাকনাশক, আগাছানাশক এবং অন্যান্য
-                    কৃষি উপকরণ
-                </strong>
-
-                সরবরাহ করার পাশাপাশি সঠিক ব্যবহার ও কৃষি ব্যবস্থাপনা
-                বিষয়ে প্রয়োজনীয় সহযোগিতা দেওয়ার চেষ্টা করি।
-
-            </p>
-
-
-            <p>
-
-                আমাদের বিশ্বাস, কৃষকের উন্নতিই দেশের কৃষি ও অর্থনীতির
-                উন্নতি। তাই গুণগত মান, সঠিক পণ্য, ন্যায্য মূল্য এবং
-                গ্রাহকের আস্থাকে সর্বোচ্চ গুরুত্ব দিয়ে আমরা কাজ করে যাচ্ছি।
-
-            </p>
-
 
             <h3>
-                🎯 আমাদের লক্ষ্য
+                ${item[0]}
             </h3>
 
-
             <p>
-
-                আধুনিক ও টেকসই কৃষির মাধ্যমে কৃষকদের উৎপাদনশীলতা বৃদ্ধি
-                করা এবং বাংলাদেশের কৃষি খাতকে আরও সমৃদ্ধ করতে ভূমিকা রাখা।
-
+                ${item[1]}
             </p>
 
+        `;
 
-            <h3>
-                🤝 আমাদের প্রতিশ্রুতি
-            </h3>
+        grid.appendChild(div);
 
-
-            <div class="promise">
-
-                মানসম্মত পণ্য • নির্ভরযোগ্য সেবা •
-                কৃষকের আস্থা • টেকসই কৃষি
-
-            </div>
+    });
 
 
-            <div class="slogan">
+    const tags=
+        document.getElementById("tags");
 
-                সিহাব এগ্রো — কৃষির উন্নয়নে, কৃষকের পাশে।
-
-            </div>
-
-
-        </div>
-
-    </section>
+    tags.innerHTML="";
 
 
-    <!-- =========================
-         LOCATION
-    ========================== -->
+    product.tags.forEach(tag=>{
 
-    <section class="section location-section" id="location">
+        const span=document.createElement("span");
 
-        <div class="section-title">
+        span.className="tag";
 
-            <span>OUR LOCATION</span>
+        span.innerText="✓ "+tag;
 
-            <h2>📍 আমাদের লোকেশন</h2>
+        tags.appendChild(span);
 
-            <p>
-                মুদিখানা, দিনাজপুর
-            </p>
-
-        </div>
+    });
 
 
-        <div class="location-icon">
-            📍
-        </div>
+    const details=
+        document.getElementById("productDetails");
+
+    details.classList.add("show");
 
 
-        <div class="location-name">
+    setTimeout(()=>{
 
-            <strong>সিহাব এগ্রো</strong><br>
+        details.scrollIntoView({
 
-            মুদিখানা, দিনাজপুর
+            behavior:"smooth",
+            block:"start"
 
-        </div>
+        });
 
+    },100);
 
-        <a class="btn btn-orange"
-           href="https://maps.app.goo.gl/ocjAJpGxoMrMPs7J9"
-           target="_blank">
-
-            🗺️ Google Maps-এ লোকেশন দেখুন
-
-        </a>
-
-    </section>
+}
 
 
-    <!-- =========================
-         CONTACT
-    ========================== -->
+/* ================= CLOSE PRODUCT ================= */
 
-    <section class="section" id="contact">
+function closeProduct(){
 
-        <div class="contact-box">
-
-            <h2>
-                📞 আমাদের সাথে যোগাযোগ করুন
-            </h2>
-
-            <p>
-                আপনার প্রয়োজনীয় কৃষি উপকরণ সম্পর্কে জানতে
-                আমাদের সাথে যোগাযোগ করুন।
-            </p>
+    document
+    .getElementById("productDetails")
+    .classList.remove("show");
 
 
-            <div class="phone-number">
+    document
+    .getElementById("products")
+    .scrollIntoView({
 
-                01322750909
+        behavior:"smooth"
 
-            </div>
+    });
 
-
-            <a class="btn btn-white"
-               href="tel:01322750909">
-
-                📞 Call Now
-
-            </a>
+}
 
 
-            <a class="btn btn-whatsapp"
-               href="https://wa.me/8801322750909"
-               target="_blank">
+/* ================= SEARCH ================= */
 
-                💬 WhatsApp
+function searchProducts(){
 
-            </a>
+    const search=
+        document
+        .getElementById("productSearch")
+        .value
+        .toLowerCase()
+        .trim();
 
-        </div>
 
-    </section>
+    const cards=
+        document.querySelectorAll(".product-card");
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    cards.forEach(card=>{
 
-    <footer>
+        const name=
+            card.dataset.name.toLowerCase();
 
-        <p>
 
-            <strong>🌱 সিহাব এগ্রো</strong>
+        if(name.includes(search)){
 
-        </p>
+            card.classList.remove("hide");
 
-        <p>
-            কৃষির উন্নয়নে, কৃষকের পাশে।
-        </p>
+        }else{
 
-        <p>
-            © 2026 Sihab Agro. All Rights Reserved.
-        </p>
+            card.classList.add("hide");
 
-    </footer>
+        }
 
+    });
+
+}
+
+
+/* ================= BACK TO TOP ================= */
+
+window.addEventListener("scroll",()=>{
+
+    const button=
+        document.getElementById("topButton");
+
+
+    if(window.scrollY>500){
+
+        button.classList.add("show");
+
+    }else{
+
+        button.classList.remove("show");
+
+    }
+
+});
+
+</script>
 
 </body>
-
 </html>
